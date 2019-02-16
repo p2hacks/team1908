@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,10 @@
 		268E215E1F98F49000498CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E215C1F98F49000498CFF /* Main.storyboard */; };
 		268E21601F98F49000498CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268E215F1F98F49000498CFF /* Assets.xcassets */; };
 		268E21631F98F49000498CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268E21611F98F49000498CFF /* LaunchScreen.storyboard */; };
+		6C4B6FB2FED7CBE873184849 /* Pods_ScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B384C12629F427902E908C15 /* Pods_ScrollView.framework */; };
+		E9794FE32217D186009930AE /* StarDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE22217D186009930AE /* StarDraw.swift */; };
+		E9794FE522180203009930AE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE422180203009930AE /* Account.swift */; };
+		E9794FE722180217009930AE /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE622180217009930AE /* Connect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		268E215F1F98F49000498CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		268E21621F98F49000498CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		268E21641F98F49000498CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C1B457AD0BBCD632EE2597 /* Pods-ScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollView.debug.xcconfig"; path = "Target Support Files/Pods-ScrollView/Pods-ScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		49BCE38458FB690708C115A8 /* Pods-ScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollView.release.xcconfig"; path = "Target Support Files/Pods-ScrollView/Pods-ScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		B384C12629F427902E908C15 /* Pods_ScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9794FE22217D186009930AE /* StarDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDraw.swift; sourceTree = "<group>"; };
+		E9794FE422180203009930AE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E9794FE622180217009930AE /* Connect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4B6FB2FED7CBE873184849 /* Pods_ScrollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				268E21571F98F49000498CFF /* ScrollView */,
 				268E21561F98F49000498CFF /* Products */,
+				731E0F9FC5783023F648E7B9 /* Pods */,
+				45787574BB4026D731C366EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +73,28 @@
 				268E215F1F98F49000498CFF /* Assets.xcassets */,
 				268E21611F98F49000498CFF /* LaunchScreen.storyboard */,
 				268E21641F98F49000498CFF /* Info.plist */,
+				E9794FE22217D186009930AE /* StarDraw.swift */,
+				E9794FE422180203009930AE /* Account.swift */,
+				E9794FE622180217009930AE /* Connect.swift */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		45787574BB4026D731C366EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B384C12629F427902E908C15 /* Pods_ScrollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		731E0F9FC5783023F648E7B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34C1B457AD0BBCD632EE2597 /* Pods-ScrollView.debug.xcconfig */,
+				49BCE38458FB690708C115A8 /* Pods-ScrollView.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268E21671F98F49000498CFF /* Build configuration list for PBXNativeTarget "ScrollView" */;
 			buildPhases = (
+				1CE3560DB52FEAB32BD6A8EC /* [CP] Check Pods Manifest.lock */,
 				268E21511F98F49000498CFF /* Sources */,
 				268E21521F98F49000498CFF /* Frameworks */,
 				268E21531F98F49000498CFF /* Resources */,
+				790297D2F2EE3EE18CBA3B5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,7 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = tnantoka;
 				TargetAttributes = {
 					268E21541F98F49000498CFF = {
@@ -101,7 +136,7 @@
 				};
 			};
 			buildConfigurationList = 268E21501F98F49000498CFF /* Build configuration list for PBXProject "ScrollView" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -131,13 +166,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CE3560DB52FEAB32BD6A8EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		790297D2F2EE3EE18CBA3B5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScrollView/Pods-ScrollView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BeerKit/BeerKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeerKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScrollView/Pods-ScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		268E21511F98F49000498CFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9794FE32217D186009930AE /* StarDraw.swift in Sources */,
+				E9794FE522180203009930AE /* Account.swift in Sources */,
 				268E215B1F98F49000498CFF /* ViewController.swift in Sources */,
 				268E21591F98F49000498CFF /* AppDelegate.swift in Sources */,
+				E9794FE722180217009930AE /* Connect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +262,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +270,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +321,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +329,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -265,18 +354,23 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		268E21681F98F49000498CFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C1B457AD0BBCD632EE2597 /* Pods-ScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.ScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -286,11 +380,15 @@
 		};
 		268E21691F98F49000498CFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49BCE38458FB690708C115A8 /* Pods-ScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ScrollView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.ScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
