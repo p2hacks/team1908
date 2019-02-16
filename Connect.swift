@@ -18,6 +18,7 @@ public class Connect {
     var myID: String = "a"     //Id
     var Mymessage: String = "a"//一言
     var MystarType: Int = 0    //自分の惑星のタイプ
+    var Familier: Int = 0      //親密度
     
     init() {
         BeerKit.transceive(serviceType: "Connection")  //Connection識別子を持つ者同士で接続開始 クロージャの引数は自分のMypeerIDと相手のpeerID
@@ -56,7 +57,7 @@ public class Connect {
     
     func SessionSendInfo() {  //セッション相手全てに行われる処理　messageに保存された値が送信される
         
-        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType)  //値をセット
+        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType, familier: Familier)  //値をセット
         let data: Data = try! JSONEncoder().encode(message)   //シリアライズ処理
         BeerKit.sendEvent("message", data: data)  //イベント処理
         
@@ -75,7 +76,7 @@ public class Connect {
     
     func IndentifySendInfo(peerId: [MCPeerID]) {  //指定したpeerIdの相手のみに行われる処理　配列型より複数に送ることが可能（多分）
         
-        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType)
+        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType, familer: Familier)
         let data: Data = try! JSONEncoder().encode(message)
         BeerKit.sendEvent("message", data: data, toPeers: peerId)
         
