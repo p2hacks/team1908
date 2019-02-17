@@ -75,6 +75,9 @@
                                                 <state key="normal" title="天体観測">
                                                     <color key="titleColor" red="1" green="0.15681045029999999" blue="0.20834049130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="rf7-X9-31m" kind="presentation" id="IZN-ks-b8I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udg-ce-o3P">
                                                 <rect key="frame" x="368" y="245" width="64" height="30"/>
@@ -150,6 +153,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="132.23388305847078"/>
+        </scene>
+        <!--Change Profile-->
+        <scene sceneID="4xP-cR-4bD">
+            <objects>
+                <viewController id="WfO-YB-U0H" customClass="ChangeProfile" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MiF-Ez-ysu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLN-eQ-zS0">
+                                <rect key="frame" x="16" y="20" width="288" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Op-Ge-ZQm">
+                                <rect key="frame" x="16" y="289" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpK-DQ-E7m">
+                                <rect key="frame" x="16" y="318" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU9-lZ-Y75">
+                                <rect key="frame" x="16" y="506" width="69" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54269536969999999" green="0.75158832129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="returnButton:" destination="WfO-YB-U0H" eventType="touchUpInside" id="XEv-ac-Trg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-c0-KkJ">
+                                <rect key="frame" x="100" y="461" width="204" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54269536969999999" green="0.75158832129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Friend"/>
+                                <connections>
+                                    <action selector="addFriendButton:" destination="WfO-YB-U0H" eventType="touchUpInside" id="0w6-h7-qFq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="message" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N5-ge-bcu">
+                                <rect key="frame" x="16" y="338" width="288" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcw-Uq-kV8">
+                                <rect key="frame" x="59" y="284" width="245" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="JRw-vb-JDe"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="5N5-ge-bcu" id="VkJ-7j-DJF"/>
+                        <outlet property="nameTextField" destination="xcw-Uq-kV8" id="lh2-hL-gvf"/>
+                        <outlet property="viewStar" destination="fLN-eQ-zS0" id="YK8-0F-pRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZZ-gA-KXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="-443"/>
+        </scene>
+        <!--Friend Screen View Controller-->
+        <scene sceneID="Pf6-iM-DoY">
+            <objects>
+                <viewController id="rf7-X9-31m" customClass="FriendScreenViewController" customModule="ScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjf-m0-rv6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天体を観測中..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRM-eC-Huf">
+                                <rect key="frame" x="16" y="36" width="173" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="観測した惑星名..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-iK-Agw">
+                                <rect key="frame" x="16" y="74" width="148" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Hs-8t-XKf" firstAttribute="trailing" secondItem="bPX-iK-Agw" secondAttribute="trailing" constant="211" id="7Sd-0j-J9f"/>
+                            <constraint firstItem="bPX-iK-Agw" firstAttribute="top" secondItem="FRM-eC-Huf" secondAttribute="bottom" constant="8" id="Bb4-XK-fBz"/>
+                            <constraint firstItem="FRM-eC-Huf" firstAttribute="top" secondItem="2Hs-8t-XKf" secondAttribute="top" constant="16" id="N0v-mf-LoY"/>
+                            <constraint firstItem="bPX-iK-Agw" firstAttribute="top" secondItem="FRM-eC-Huf" secondAttribute="bottom" constant="8" id="Oi9-LQ-EoQ"/>
+                            <constraint firstItem="2Hs-8t-XKf" firstAttribute="trailing" secondItem="FRM-eC-Huf" secondAttribute="trailing" constant="186" id="WPi-nf-ogn"/>
+                            <constraint firstItem="bPX-iK-Agw" firstAttribute="leading" secondItem="2Hs-8t-XKf" secondAttribute="leading" constant="16" id="bBh-Ru-jYa"/>
+                            <constraint firstItem="FRM-eC-Huf" firstAttribute="leading" secondItem="2Hs-8t-XKf" secondAttribute="leading" constant="16" id="kYZ-gX-M9b"/>
+                            <constraint firstItem="2Hs-8t-XKf" firstAttribute="bottom" secondItem="bPX-iK-Agw" secondAttribute="bottom" constant="563" id="rNP-XH-0lK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Hs-8t-XKf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxE-A1-ua0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381.5999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,8 @@
 		E9C25D3722191722000C7A10 /* star6.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3122191722000C7A10 /* star6.png */; };
 		E9C25D3822191722000C7A10 /* star5.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3222191722000C7A10 /* star5.png */; };
 		E9C25D3922191722000C7A10 /* star4.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3322191722000C7A10 /* star4.png */; };
+		E9C25D3B221921DC000C7A10 /* FriendScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C25D3A221921DC000C7A10 /* FriendScreenViewController.swift */; };
+		E9C25D3D22192E16000C7A10 /* FriendProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C25D3C22192E16000C7A10 /* FriendProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		E9C25D3122191722000C7A10 /* star6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star6.png; sourceTree = "<group>"; };
 		E9C25D3222191722000C7A10 /* star5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star5.png; sourceTree = "<group>"; };
 		E9C25D3322191722000C7A10 /* star4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4.png; sourceTree = "<group>"; };
+		E9C25D3A221921DC000C7A10 /* FriendScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendScreenViewController.swift; sourceTree = "<group>"; };
+		E9C25D3C22192E16000C7A10 /* FriendProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				268E21581F98F49000498CFF /* AppDelegate.swift */,
 				268E215A1F98F49000498CFF /* ViewController.swift */,
 				268E215C1F98F49000498CFF /* Main.storyboard */,
+				E9C25D3A221921DC000C7A10 /* FriendScreenViewController.swift */,
+				E9C25D3C22192E16000C7A10 /* FriendProfile.swift */,
 				268E215F1F98F49000498CFF /* Assets.xcassets */,
 				268E21611F98F49000498CFF /* LaunchScreen.storyboard */,
 				268E21641F98F49000498CFF /* Info.plist */,
@@ -250,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C25D3D22192E16000C7A10 /* FriendProfile.swift in Sources */,
 				E9794FE32217D186009930AE /* StarDraw.swift in Sources */,
 				E9794FE522180203009930AE /* Account.swift in Sources */,
+				E9C25D3B221921DC000C7A10 /* FriendScreenViewController.swift in Sources */,
 				268E215B1F98F49000498CFF /* ViewController.swift in Sources */,
 				268E21591F98F49000498CFF /* AppDelegate.swift in Sources */,
 				E9794FE722180217009930AE /* Connect.swift in Sources */,
