@@ -6,7 +6,7 @@
 //  Copyright © 2019年 hajime ito. All rights reserved.
 //
 
-/*
+
 import Foundation
 
 class account: Codable {
@@ -25,4 +25,4 @@ class account: Codable {
     }
     
 }
-*/
+

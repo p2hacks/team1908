@@ -16,6 +16,12 @@
 		E9794FE32217D186009930AE /* StarDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE22217D186009930AE /* StarDraw.swift */; };
 		E9794FE522180203009930AE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE422180203009930AE /* Account.swift */; };
 		E9794FE722180217009930AE /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9794FE622180217009930AE /* Connect.swift */; };
+		E9C25D3422191722000C7A10 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D2E22191722000C7A10 /* star1.png */; };
+		E9C25D3522191722000C7A10 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D2F22191722000C7A10 /* star3.png */; };
+		E9C25D3622191722000C7A10 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3022191722000C7A10 /* star2.png */; };
+		E9C25D3722191722000C7A10 /* star6.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3122191722000C7A10 /* star6.png */; };
+		E9C25D3822191722000C7A10 /* star5.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3222191722000C7A10 /* star5.png */; };
+		E9C25D3922191722000C7A10 /* star4.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C25D3322191722000C7A10 /* star4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		E9794FE22217D186009930AE /* StarDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDraw.swift; sourceTree = "<group>"; };
 		E9794FE422180203009930AE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		E9794FE622180217009930AE /* Connect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
+		E9C25D2E22191722000C7A10 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
+		E9C25D2F22191722000C7A10 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
+		E9C25D3022191722000C7A10 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
+		E9C25D3122191722000C7A10 /* star6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star6.png; sourceTree = "<group>"; };
+		E9C25D3222191722000C7A10 /* star5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star5.png; sourceTree = "<group>"; };
+		E9C25D3322191722000C7A10 /* star4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 		268E21571F98F49000498CFF /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				E9C25D2D22191722000C7A10 /* img */,
 				268E21581F98F49000498CFF /* AppDelegate.swift */,
 				268E215A1F98F49000498CFF /* ViewController.swift */,
 				268E215C1F98F49000498CFF /* Main.storyboard */,
@@ -96,6 +109,19 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		E9C25D2D22191722000C7A10 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E9C25D2E22191722000C7A10 /* star1.png */,
+				E9C25D2F22191722000C7A10 /* star3.png */,
+				E9C25D3022191722000C7A10 /* star2.png */,
+				E9C25D3122191722000C7A10 /* star6.png */,
+				E9C25D3222191722000C7A10 /* star5.png */,
+				E9C25D3322191722000C7A10 /* star4.png */,
+			);
+			path = img;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -159,8 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				268E21631F98F49000498CFF /* LaunchScreen.storyboard in Resources */,
+				E9C25D3922191722000C7A10 /* star4.png in Resources */,
 				268E21601F98F49000498CFF /* Assets.xcassets in Resources */,
+				E9C25D3522191722000C7A10 /* star3.png in Resources */,
+				E9C25D3822191722000C7A10 /* star5.png in Resources */,
+				E9C25D3722191722000C7A10 /* star6.png in Resources */,
 				268E215E1F98F49000498CFF /* Main.storyboard in Resources */,
+				E9C25D3622191722000C7A10 /* star2.png in Resources */,
+				E9C25D3422191722000C7A10 /* star1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

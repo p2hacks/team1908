@@ -6,7 +6,7 @@
 //  Copyright © 2019 hajime ito. All rights reserved.
 //
 
-/*import BeerKit  //MultipeerConnectivityをもとに作られたライブラリ　通信処理をサポートする
+import BeerKit  //MultipeerConnectivityをもとに作られたライブラリ　通信処理をサポートする
 import MultipeerConnectivity  //通信処理をサポートする　BeerKitでも参照されている
 
 public class Connect {
@@ -76,7 +76,7 @@ public class Connect {
     
     func IndentifySendInfo(peerId: [MCPeerID]) {  //指定したpeerIdの相手のみに行われる処理　配列型より複数に送ることが可能（多分）
         
-        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType, familer: Familier)
+        let message = account(Name: Myname, id: myID, Message: Mymessage, StarType: MystarType, familier: Familier)
         let data: Data = try! JSONEncoder().encode(message)
         BeerKit.sendEvent("message", data: data, toPeers: peerId)
         
@@ -101,4 +101,4 @@ public class Connect {
     
     
 }
-*/
+
