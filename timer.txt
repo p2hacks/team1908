@@ -1,0 +1,8 @@
+override func viewDidLoad() {
+        super.viewDidLoad()
+        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(MainViewController.timerUpdate), userInfo: nil, repeats: true)
+    }
+
+    @objc func timerUpdate() {
+        print("update")
+    }
