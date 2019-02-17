@@ -2,14 +2,32 @@
 //アカウント管理クラス
 class AccountManager{
     
+    var myAccount : account = account.init(Name: "MyName", id: "id", Message: "message", StarType: 0, familier: 0)
     //友達一覧
     var friends : [account] = [];
     //友達最大数
     var friendMax : Int = 20;
-    //最大親愛度（1分に1増えるとして、100時間）
-    var familierMax : Int = 6000;
-    //親愛度の増える量(1~)
-    var familierAppend : Int = 1;
+    //友達ファイルの先頭名
+    let friendFileName = "friend_"
+    //自分のアカウントのファイル名
+    let myAccountFileName = "myAccount"
+    
+    static func MakeNewID()->String{
+        
+        let length : Int = 40
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
     
     //友達を一人追加（引数は追加するアカウント）
     func AddFriend(account:account){
@@ -29,21 +47,13 @@ class AccountManager{
     }
     
     //友達の情報を最新のものに更新（引数は取得可能なすべて（友達以外も含む）の最新のアカウント）
-    //!!簡易的実装として、更新確認の際に親愛度を１増やすことで、一緒にいる時間に親愛度を比例させています!!
     func FreandsUpdate(newAcountDatas : [account]){
         
         for newAcountData in newAcountDatas {
             for (index, friend) in friends.enumerated(){
                 if(newAcountData.ID == friend.ID){
-                    
                     friends[index] = newAcountData
-                    
-                    friends[index].Familier += familierAppend;
-                    
-                    if(friends[index].Familier > familierMax){
-                    
-                        friends[index].Familier = familierMax
-                    }
+                    friends[index].Familier += 1
                 }
             }
         }
@@ -72,10 +82,48 @@ class AccountManager{
             return []
         }
         
-        return files.filter{$0.contains("friend_")}
+        return files.filter{$0.contains(friendFileName)}
         
     }
     
+    //自分のアカウントをファイルとして保存
+    func SaveMyAccount(){
+        
+        let fileName : String = myAccountFileName + ".json"
+        let text : String = encode(account: myAccount)
+        if let dir = FileURL(){
+            
+            let pathFileName = dir.appendingPathComponent( fileName )
+            
+            do{
+                try text.write( to: pathFileName, atomically: false, encoding: String.Encoding.utf8 )
+            }catch{
+            }
+        }
+    }
+    
+    //ファイルから自分のアカウントを読み込む(存在していればtrue,存在しなければfalse)
+    func LoadMyAccount() -> Bool{
+        
+        let fileName : String = myAccountFileName + ".json"
+        if let dir = FileURL(){
+            
+            let pathFileName = dir.appendingPathComponent( fileName )
+            
+            let manager = FileManager()
+            if(manager.fileExists(atPath: dir.absoluteString)){
+                
+                do{
+                    let text = try String( contentsOf: pathFileName, encoding: String.Encoding.utf8 )
+                    myAccount = decode(string:text)
+                    return true
+                }catch{
+                    return false
+                }
+            }
+        }
+        return false;
+    }
     //友達情報をファイルとして保存
     func SaveFreands(){
         
@@ -90,7 +138,7 @@ class AccountManager{
         }
         
         for friend in friends {
-            let fileName : String = "friend_" + friend.ID + ".json"
+            let fileName : String = friendFileName + friend.ID + ".json"
             let text : String = encode(account: friend)
             if let dir = FileURL(){
                 
@@ -103,6 +151,8 @@ class AccountManager{
             }
         }
     }
+    
+    
     
     //ファイルから友達情報を読み込む
     func LoadFreands(){
@@ -122,7 +172,6 @@ class AccountManager{
                     friends.append(decode(string:text))
                     
                 }catch{
-                    return
                 }
             }
         }
