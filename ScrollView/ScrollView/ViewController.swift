@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         // ボタンの生成
         let button = UIButton(type: UIButtonType.system)
         // 位置とサイズの指定
-        button.frame = CGRect(x: 100, y: 0, width: 300, height: 40)
+        button.frame = CGRect(x: 100, y: 2000, width: 300, height: 40)
         // ボタンの位置を中心に設定する
-        button.center = self.view.center
+        //button.center = self.view.center
         // ボタンのタイトルの設定
         button.setTitle("ボタン", for: .normal)
         // 配色の設定

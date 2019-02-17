@@ -5,8 +5,8 @@
 //  Created by b1018194 on 2/16/19.
 //  Copyright © 2019 hajime ito. All rights reserved.
 //
-/*
-import BeerKit  //MultipeerConnectivityをもとに作られたライブラリ　通信処理をサポートする
+
+/*import BeerKit  //MultipeerConnectivityをもとに作られたライブラリ　通信処理をサポートする
 import MultipeerConnectivity  //通信処理をサポートする　BeerKitでも参照されている
 
 public class Connect {
