@@ -33,15 +33,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="800" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zj-hm-XIp">
-                                                <rect key="frame" x="268" y="231" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zj-hm-XIp">
+                                                <rect key="frame" x="239" y="216" width="70" height="59"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="F1"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDs-oa-KbQ">
-                                                <rect key="frame" x="268" y="402" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="F2"/>
+                                                <state key="normal" title="F1" image="star1.png"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-sf-HWL">
                                                 <rect key="frame" x="158" y="87" width="30" height="30"/>
@@ -74,10 +69,10 @@
                                                 <state key="normal" title="F8"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ph-Ei-iit">
-                                                <rect key="frame" x="333" y="516" width="134" height="52"/>
+                                                <rect key="frame" x="343" y="522" width="114" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                <state key="normal" title="友達追加">
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="天体観測">
                                                     <color key="titleColor" red="1" green="0.15681045029999999" blue="0.20834049130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -133,6 +128,11 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="F0"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDs-oa-KbQ">
+                                                <rect key="frame" x="225" y="371" width="98" height="93"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="F2" image="star2.png"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.13128594259401563" green="0.13641457251794897" blue="0.31225712435233166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -152,4 +152,8 @@
             <point key="canvasLocation" x="136" y="132.23388305847078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star1.png" width="256" height="256"/>
+        <image name="star2.png" width="256" height="256"/>
+    </resources>
 </document>
